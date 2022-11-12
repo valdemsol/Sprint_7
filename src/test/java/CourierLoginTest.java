@@ -1,3 +1,7 @@
+import api.courier.Courier;
+import api.courier.CourierClient;
+import api.courier.CourierGenerator;
+import api.courier.Credentials;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
@@ -27,10 +31,9 @@ public class CourierLoginTest {
         ValidatableResponse loginResponse = courierClient.login(Credentials.from(courier));
         int loginStatusCode = loginResponse.extract().statusCode();
         //Проверка, что логин прошел успешно
-        assertEquals("Courier is not login", SC_OK, loginStatusCode);
+        assertEquals("api.courier.Courier is not login", SC_OK, loginStatusCode);
         courierId = loginResponse.extract().path("id");
         //Проверка, что id не равен нулю
         assertNotNull("Id is null", courierId);
     }
-
 }

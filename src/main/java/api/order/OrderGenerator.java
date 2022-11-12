@@ -1,3 +1,5 @@
+package api.order;
+
 public class OrderGenerator {
 
     public static Order getDefault(String[] color) {
@@ -10,6 +12,5 @@ public class OrderGenerator {
                 "2022-11-11",
                 "Hurry up",
                 color);
-
     }
 }

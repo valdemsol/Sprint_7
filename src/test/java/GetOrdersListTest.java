@@ -1,3 +1,4 @@
+import api.order.OrderClient;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
@@ -31,8 +32,5 @@ public class GetOrdersListTest {
         ArrayList<String> orderBody = response.extract().path("orders");
         boolean isNotEmpty = orderBody!=null && !orderBody.isEmpty();
         assertTrue("Orders is empty", isNotEmpty);
-
-
     }
-
 }

@@ -1,3 +1,6 @@
+package api.courier;
+
+import api.utils.RestBase;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 
@@ -20,7 +23,7 @@ public class CourierClient extends RestBase {
                 .then();
     }
 
-    @Step ("Courier login")
+    @Step ("api.courier.Courier login")
     public ValidatableResponse login(Credentials credentials ) {
         return given()
                 .spec(getBaseSpec())

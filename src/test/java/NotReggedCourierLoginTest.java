@@ -1,3 +1,7 @@
+import api.courier.Courier;
+import api.courier.CourierClient;
+import api.courier.CourierGenerator;
+import api.courier.Credentials;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;

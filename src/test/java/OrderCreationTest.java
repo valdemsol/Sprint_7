@@ -1,3 +1,6 @@
+import api.order.Order;
+import api.order.OrderClient;
+import api.order.OrderGenerator;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
@@ -40,16 +43,16 @@ public class OrderCreationTest {
     }
 
     @Test
-    @DisplayName("Order can be created Successfully")
+    @DisplayName("api.order.Order can be created Successfully")
     @Description("Service will return 201 Created when new order is created")
     public void orderCanBeCreatedTest() {
-        //Создание заказа и проверяем код статуса
+        //Создание заказа
         ValidatableResponse response = orderClient.create(order);
+        //Проверка кода статуса
         int statusCode = response.extract().statusCode();
         assertEquals("Status code is incorrect", SC_CREATED, statusCode);
         orderTrack = response.extract().path("track");
         //Проверка, что трэк не равен нулю
         assertNotNull("Track is null", orderTrack);
     }
-
 }

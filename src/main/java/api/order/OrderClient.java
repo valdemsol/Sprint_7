@@ -1,3 +1,6 @@
+package api.order;
+
+import api.utils.RestBase;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
 
@@ -24,5 +27,4 @@ public class OrderClient extends RestBase {
                 .get(ORDER_PATH)
                 .then();
     }
-
 }

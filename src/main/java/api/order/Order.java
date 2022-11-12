@@ -1,3 +1,5 @@
+package api.order;
+
 public class Order {
     private String firstName;
     private String lastName;
@@ -92,4 +94,5 @@ public class Order {
     public void setColor(String[] color) {
         this.color = color;
     }
+
 }

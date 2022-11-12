@@ -1,3 +1,7 @@
+import api.courier.Courier;
+import api.courier.CourierClient;
+import api.courier.CourierGenerator;
+import api.courier.Credentials;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
@@ -19,8 +23,8 @@ public class CourierLoginWithoutPassTest {
     }
 
     @Test
-    @DisplayName("Courier login without password")
-    @Description("Service will return 400 Bad Request when Courier try to login without password field")
+    @DisplayName("api.courier.Courier login without password")
+    @Description("Service will return 400 Bad Request when api.courier.Courier try to login without password field")
     public void courierCannotBeLoggedTest () {
         //Логин курьера без пароля и проверка, что процесс не удался
         ValidatableResponse loginResponse = courierClient.login(Credentials.from(courier));

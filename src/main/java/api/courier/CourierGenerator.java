@@ -1,3 +1,5 @@
+package api.courier;
+
 public class CourierGenerator {
 
     public static Courier courierDefault() {
@@ -5,11 +7,11 @@ public class CourierGenerator {
     }
 
     public static Courier courierWithoutPass() {
-        return new Courier ("apple", "", "johnny");
+        return new Courier("apple", "", "johnny");
     }
 
     public static Courier reggedCourier() {
-        return new Courier ("melon", "1234", "tomas");
+        return new Courier("melon", "1234", "tomas");
     }
 
     public static Courier notReggedCourier() {
